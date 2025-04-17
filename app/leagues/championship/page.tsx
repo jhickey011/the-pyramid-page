@@ -1,3 +1,6 @@
+import Link from "next/link";
+import NavBar from "@/components/NavBar";
+
 export default function ChampionshipPage() {
   return (
     <main className="min-h-screen p-8 bg-white text-gray-900">
