@@ -21,6 +21,7 @@ export default function Home() {
         {/* Row 2: Championship */}
         <div className="grid grid-cols-1 place-items-center mb-6">
           <a href="/leagues/championship" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 w-64 text-center">
+            <img src="/logos/championship.png" alt="Championship Logo" className="mx-auto mb-2 h-10" />
             <h3 className="text-xl font-medium text-blue-900">Championship</h3>
             <p>Women's Championship</p>
           </a>
