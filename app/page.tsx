@@ -12,6 +12,7 @@ export default function Home() {
         {/* Row 1: WSL */}
         <div className="grid grid-cols-1 place-items-center mb-6">
           <a href="/leagues/wsl" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 w-64 text-center">
+            <img src="/logos/wsl.png" alt="WSL Logo" className="mx-auto mb-2 h-10" />
             <h3 className="text-xl font-medium text-blue-900">WSL</h3>
             <p>Women's Super League</p>
           </a>
@@ -58,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Row 5: Tier 5 Regional Leagues Grouped */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {/* Northern Tier 5 */}
           <div className="bg-blue-50 rounded-xl shadow p-6">
             <h3 className="text-xl font-semibold text-blue-900 mb-4 text-center">Tier 5 – Northern Region</h3>
@@ -80,6 +81,12 @@ export default function Home() {
               <a href="/leagues/southern-premier" className="hover:underline text-green-800 text-center">Southern Premier</a>
             </div>
           </div>
+        </div>
+
+        {/* Row 6: Tier 6 Placeholder */}
+        <div className="mt-10 text-center">
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">Tier 6 – County & Sub-Regional Leagues</h3>
+          <p className="text-sm text-gray-600">Coming soon: local leagues feeding into Tier 5, by region</p>
         </div>
       </section>
     </main>
