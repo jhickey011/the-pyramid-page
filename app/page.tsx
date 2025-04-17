@@ -41,56 +41,63 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center mb-6">
           <a href="/leagues/division-one-north" className="bg-blue-50 hover:bg-blue-100 transition rounded-xl shadow p-4 text-center">
             <h3 className="text-lg font-medium text-blue-800">Division One North</h3>
-            <p>Tier 4 – North</p>
+            <p>Tier 4</p>
           </a>
           <a href="/leagues/division-one-midlands" className="bg-blue-50 hover:bg-blue-100 transition rounded-xl shadow p-4 text-center">
             <h3 className="text-lg font-medium text-blue-800">Division One Midlands</h3>
-            <p>Tier 4 – Midlands</p>
+            <p>Tier 4</p>
           </a>
           <a href="/leagues/division-one-south-east" className="bg-green-50 hover:bg-green-100 transition rounded-xl shadow p-4 text-center">
             <h3 className="text-lg font-medium text-green-800">Division One South East</h3>
-            <p>Tier 4 – South East</p>
+            <p>Tier 4</p>
           </a>
           <a href="/leagues/division-one-south-west" className="bg-green-50 hover:bg-green-100 transition rounded-xl shadow p-4 text-center">
             <h3 className="text-lg font-medium text-green-800">Division One South West</h3>
-            <p>Tier 4 – South West</p>
+            <p>Tier 4</p>
           </a>
         </div>
 
-        {/* Row 5: Tier 5 Regional Leagues */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
-          <a href="/leagues/east-midlands-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-blue-900">East Midlands Premier</h3>
-            <p>Tier 5 – Feeds Midlands</p>
-          </a>
-          <a href="/leagues/eastern-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-green-900">Eastern Premier</h3>
-            <p>Tier 5 – Feeds South East</p>
-          </a>
-          <a href="/leagues/london-se-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-green-900">London & SE Premier</h3>
-            <p>Tier 5 – Feeds South East</p>
-          </a>
-          <a href="/leagues/north-east-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-blue-900">North East Premier</h3>
-            <p>Tier 5 – Feeds North</p>
-          </a>
-          <a href="/leagues/north-west-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-blue-900">North West Premier</h3>
-            <p>Tier 5 – Feeds North</p>
-          </a>
-          <a href="/leagues/south-west-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-green-900">South West Premier</h3>
-            <p>Tier 5 – Feeds South West</p>
-          </a>
-          <a href="/leagues/southern-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-green-900">Southern Premier</h3>
-            <p>Tier 5 – Feeds South West</p>
-          </a>
-          <a href="/leagues/west-midlands-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
-            <h3 className="text-md font-medium text-blue-900">West Midlands Premier</h3>
-            <p>Tier 5 – Feeds Midlands</p>
-          </a>
+        {/* Row 5: Tier 5 Regional Leagues - Left: North/Midlands | Right: South */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
+          {/* Left column (Northern/Midlands - Blue) */}
+          <div className="space-y-4">
+            <a href="/leagues/east-midlands-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-blue-900">East Midlands Premier</h3>
+              <p>Tier 5</p>
+            </a>
+            <a href="/leagues/north-east-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-blue-900">North East Premier</h3>
+              <p>Tier 5</p>
+            </a>
+            <a href="/leagues/north-west-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-blue-900">North West Premier</h3>
+              <p>Tier 5</p>
+            </a>
+            <a href="/leagues/west-midlands-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-blue-900">West Midlands Premier</h3>
+              <p>Tier 5</p>
+            </a>
+          </div>
+
+          {/* Right column (Southern - Green) */}
+          <div className="space-y-4">
+            <a href="/leagues/eastern-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-green-900">Eastern Premier</h3>
+              <p>Tier 5</p>
+            </a>
+            <a href="/leagues/london-se-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-green-900">London & SE Premier</h3>
+              <p>Tier 5</p>
+            </a>
+            <a href="/leagues/south-west-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-green-900">South West Premier</h3>
+              <p>Tier 5</p>
+            </a>
+            <a href="/leagues/southern-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+              <h3 className="text-md font-medium text-green-900">Southern Premier</h3>
+              <p>Tier 5</p>
+            </a>
+          </div>
         </div>
       </section>
     </main>
