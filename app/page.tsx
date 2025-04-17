@@ -6,7 +6,7 @@ export default function Home() {
         <p className="text-sm mt-1">Exploring the full structure of Women's Football in England</p>
       </header>
 
-      <section className="p-8 max-w-6xl mx-auto">
+      <section className="p-8 max-w-7xl mx-auto">
         <h2 className="text-2xl font-semibold mb-8 text-center">Women's Football League Pyramid</h2>
 
         {/* Row 1: WSL */}
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         {/* Row 4: Division One (North, Midlands, SE, SW) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center mb-6">
           <a href="/leagues/division-one-north" className="bg-blue-50 hover:bg-blue-100 transition rounded-xl shadow p-4 text-center">
             <h3 className="text-lg font-medium text-blue-800">Division One North</h3>
             <p>Tier 4 – North</p>
@@ -54,6 +54,42 @@ export default function Home() {
           <a href="/leagues/division-one-south-west" className="bg-green-50 hover:bg-green-100 transition rounded-xl shadow p-4 text-center">
             <h3 className="text-lg font-medium text-green-800">Division One South West</h3>
             <p>Tier 4 – South West</p>
+          </a>
+        </div>
+
+        {/* Row 5: Tier 5 Regional Leagues */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+          <a href="/leagues/east-midlands-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-blue-900">East Midlands Premier</h3>
+            <p>Tier 5 – Feeds Midlands</p>
+          </a>
+          <a href="/leagues/eastern-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-green-900">Eastern Premier</h3>
+            <p>Tier 5 – Feeds South East</p>
+          </a>
+          <a href="/leagues/london-se-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-green-900">London & SE Premier</h3>
+            <p>Tier 5 – Feeds South East</p>
+          </a>
+          <a href="/leagues/north-east-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-blue-900">North East Premier</h3>
+            <p>Tier 5 – Feeds North</p>
+          </a>
+          <a href="/leagues/north-west-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-blue-900">North West Premier</h3>
+            <p>Tier 5 – Feeds North</p>
+          </a>
+          <a href="/leagues/south-west-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-green-900">South West Premier</h3>
+            <p>Tier 5 – Feeds South West</p>
+          </a>
+          <a href="/leagues/southern-premier" className="bg-green-100 hover:bg-green-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-green-900">Southern Premier</h3>
+            <p>Tier 5 – Feeds South West</p>
+          </a>
+          <a href="/leagues/west-midlands-premier" className="bg-blue-100 hover:bg-blue-200 transition rounded-xl shadow p-4 text-center">
+            <h3 className="text-md font-medium text-blue-900">West Midlands Premier</h3>
+            <p>Tier 5 – Feeds Midlands</p>
           </a>
         </div>
       </section>
