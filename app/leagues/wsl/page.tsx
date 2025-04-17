@@ -25,7 +25,7 @@ export default function WSLPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">League Table (Top 5)</h2>
+        <h2 className="text-2xl font-semibold mb-4">League Table</h2>
         <table className="w-full text-left border-collapse">
           <thead>
             <tr>
@@ -39,51 +39,16 @@ export default function WSLPage() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="p-2">1</td>
-              <td className="p-2">Chelsea</td>
-              <td className="p-2">18</td>
-              <td className="p-2">14</td>
-              <td className="p-2">2</td>
-              <td className="p-2">2</td>
-              <td className="p-2">44</td>
-            </tr>
-            <tr>
-              <td className="p-2">2</td>
-              <td className="p-2">Arsenal</td>
-              <td className="p-2">18</td>
-              <td className="p-2">13</td>
-              <td className="p-2">3</td>
-              <td className="p-2">2</td>
-              <td className="p-2">42</td>
-            </tr>
-            <tr>
-              <td className="p-2">3</td>
-              <td className="p-2">Man City</td>
-              <td className="p-2">18</td>
-              <td className="p-2">12</td>
-              <td className="p-2">4</td>
-              <td className="p-2">2</td>
-              <td className="p-2">40</td>
-            </tr>
-            <tr>
-              <td className="p-2">4</td>
-              <td className="p-2">Man United</td>
-              <td className="p-2">18</td>
-              <td className="p-2">10</td>
-              <td className="p-2">5</td>
-              <td className="p-2">3</td>
-              <td className="p-2">35</td>
-            </tr>
-            <tr>
-              <td className="p-2">5</td>
-              <td className="p-2">Aston Villa</td>
-              <td className="p-2">18</td>
-              <td className="p-2">9</td>
-              <td className="p-2">4</td>
-              <td className="p-2">5</td>
-              <td className="p-2">31</td>
-            </tr>
+            <tr><td className="p-2">1</td><td className="p-2">Chelsea</td><td className="p-2">18</td><td className="p-2">14</td><td className="p-2">2</td><td className="p-2">2</td><td className="p-2">44</td></tr>
+            <tr><td className="p-2">2</td><td className="p-2">Arsenal</td><td className="p-2">18</td><td className="p-2">13</td><td className="p-2">3</td><td className="p-2">2</td><td className="p-2">42</td></tr>
+            <tr><td className="p-2">3</td><td className="p-2">Man City</td><td className="p-2">18</td><td className="p-2">12</td><td className="p-2">4</td><td className="p-2">2</td><td className="p-2">40</td></tr>
+            <tr><td className="p-2">4</td><td className="p-2">Man United</td><td className="p-2">18</td><td className="p-2">10</td><td className="p-2">5</td><td className="p-2">3</td><td className="p-2">35</td></tr>
+            <tr><td className="p-2">5</td><td className="p-2">Aston Villa</td><td className="p-2">18</td><td className="p-2">9</td><td className="p-2">4</td><td className="p-2">5</td><td className="p-2">31</td></tr>
+            <tr><td className="p-2">6</td><td className="p-2">Tottenham</td><td className="p-2">18</td><td className="p-2">7</td><td className="p-2">3</td><td className="p-2">8</td><td className="p-2">24</td></tr>
+            <tr><td className="p-2">7</td><td className="p-2">Everton</td><td className="p-2">18</td><td className="p-2">6</td><td className="p-2">4</td><td className="p-2">8</td><td className="p-2">22</td></tr>
+            <tr><td className="p-2">8</td><td className="p-2">Brighton</td><td className="p-2">18</td><td className="p-2">5</td><td className="p-2">4</td><td className="p-2">9</td><td className="p-2">19</td></tr>
+            <tr><td className="p-2">9</td><td className="p-2">Leicester City</td><td className="p-2">18</td><td className="p-2">5</td><td className="p-2">2</td><td className="p-2">11</td><td className="p-2">17</td></tr>
+            <tr><td className="p-2">10</td><td className="p-2">Bristol City</td><td className="p-2">18</td><td className="p-2">3</td><td className="p-2">2</td><td className="p-2">13</td><td className="p-2">11</td></tr>
           </tbody>
         </table>
       </section>
