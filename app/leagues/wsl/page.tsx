@@ -28,19 +28,19 @@ export default function WSLPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-green-100"><td className="p-2">1</td><td className="p-2">Chelsea</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr className="bg-green-100"><td className="p-2">2</td><td className="p-2">Arsenal</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr className="bg-green-100"><td className="p-2">3</td><td className="p-2">Manchester United</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">4</td><td className="p-2">Manchester City</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">5</td><td className="p-2">Liverpool</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">6</td><td className="p-2">Tottenham Hotspur</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">7</td><td className="p-2">Aston Villa</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">8</td><td className="p-2">Everton</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">9</td><td className="p-2">Brighton & Hove Albion</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">10</td><td className="p-2">Leicester City</td><td className="p-2">—</td><td className="p-2">—</td></tr>
-                <tr><td className="p-2">11</td><td className="p-2">West Ham United</td><td className="p-2">—</td><td className="p-2">—</td></tr>
+                <tr className="bg-green-100"><td className="p-2">1</td><td className="p-2">Chelsea</td><td className="p-2">18</td><td className="p-2">46</td></tr>
+                <tr className="bg-green-100"><td className="p-2">2</td><td className="p-2">Arsenal</td><td className="p-2">18</td><td className="p-2">43</td></tr>
+                <tr className="bg-green-100"><td className="p-2">3</td><td className="p-2">Manchester United</td><td className="p-2">18</td><td className="p-2">40</td></tr>
+                <tr><td className="p-2">4</td><td className="p-2">Manchester City</td><td className="p-2">18</td><td className="p-2">38</td></tr>
+                <tr><td className="p-2">5</td><td className="p-2">Liverpool</td><td className="p-2">18</td><td className="p-2">35</td></tr>
+                <tr><td className="p-2">6</td><td className="p-2">Tottenham Hotspur</td><td className="p-2">18</td><td className="p-2">30</td></tr>
+                <tr><td className="p-2">7</td><td className="p-2">Aston Villa</td><td className="p-2">18</td><td className="p-2">28</td></tr>
+                <tr><td className="p-2">8</td><td className="p-2">Everton</td><td className="p-2">18</td><td className="p-2">25</td></tr>
+                <tr><td className="p-2">9</td><td className="p-2">Brighton & Hove Albion</td><td className="p-2">18</td><td className="p-2">22</td></tr>
+                <tr><td className="p-2">10</td><td className="p-2">Leicester City</td><td className="p-2">18</td><td className="p-2">20</td></tr>
+                <tr><td className="p-2">11</td><td className="p-2">West Ham United</td><td className="p-2">18</td><td className="p-2">18</td></tr>
                 <tr className="border-t-4 border-red-500">
-                  <td className="p-2">12</td><td className="p-2">Crystal Palace</td><td className="p-2">—</td><td className="p-2">—</td>
+                  <td className="p-2">12</td><td className="p-2">Crystal Palace</td><td className="p-2">18</td><td className="p-2">15</td>
                 </tr>
               </tbody>
             </table>
@@ -68,9 +68,8 @@ export default function WSLPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td className="p-2">Khadija Shaw</td><td className="p-2">Manchester City</td><td className="p-2">12</td></tr>
-              <tr><td className="p-2">Alessia Russo</td><td className="p-2">Arsenal</td><td className="p-2">11</td></tr>
-              <tr><td className="p-2">Elisabeth Terland</td><td className="p-2">Manchester United</td><td className="p-2">9</td></tr>
-              <tr><td className="p-2">Aggie Beever-Jones
-::contentReference[oaicite:2]{index=2}
+              <tr><td className="p-2">Khadija Shaw</td><td className="p-2">Manchester City</td><td className="p-2">21</td></tr>
+              <tr><td className="p-2">Alessia Russo</td><td className="p-2">Arsenal</td><td className="p-2">14</td></tr>
+              <tr><td className="p-2">Lauren James</td><td className="p-2">Chelsea</td><td className="p-2">13</td></
+::contentReference[oaicite:0]{index=0}
  
