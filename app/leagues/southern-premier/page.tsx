@@ -1,5 +1,3 @@
-import NavBar from "../../components/NavBar";
-
 export default function SouthernPremierPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
