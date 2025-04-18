@@ -68,16 +68,9 @@ export default function WSLPage() {
               </tr>
             </thead>
             <tbody>
-              <tr><td className="p-2">Khadija Shaw</td><td className="p-2">Manchester City</td><td className="p-2">21</td></tr>
-              <tr><td className="p-2">Lauren James</td><td className="p-2">Chelsea</td><td className="p-2">13</td></tr>
-              <tr><td className="p-2">Elisabeth Terland</td><td className="p-2">Brighton & Hove Albion</td><td className="p-2">—</td></tr>
-              <tr><td className="p-2">Alessia Russo</td><td className="p-2">Arsenal</td><td className="p-2">12</td></tr>
-              <tr><td className="p-2">Aggie Beever-Jones</td><td className="p-2">Chelsea</td><td className="p-2">11</td></tr>
-              <tr><td className="p-2">Lauren Hemp</td><td className="p-2">Manchester City</td><td className="p-2">11</td></tr>
-            </tbody>
-          </table>
-        </section>
-      </div>
-    </main>
-  );
-}
+              <tr><td className="p-2">Khadija Shaw</td><td className="p-2">Manchester City</td><td className="p-2">12</td></tr>
+              <tr><td className="p-2">Alessia Russo</td><td className="p-2">Arsenal</td><td className="p-2">11</td></tr>
+              <tr><td className="p-2">Elisabeth Terland</td><td className="p-2">Manchester United</td><td className="p-2">9</td></tr>
+              <tr><td className="p-2">Aggie Beever-Jones
+::contentReference[oaicite:2]{index=2}
+ 
