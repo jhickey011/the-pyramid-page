@@ -1,5 +1,5 @@
-import { getWSLFixtures } from "../../../../lib/getWSLFixtures";
-import NavBar from "../../../components/NavBar";
+import { getWSLFixtures } from "@/lib/getWSLFixtures";
+import NavBar from "@/components/NavBar";
 
 function formatDateHeader(dateString: string) {
   return new Date(dateString).toLocaleDateString("en-UK", {
