@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBar";
-import Link from "next/link";
+import NavBar from "../../../components/NavBar";
+import { getWSLStandings } from "../../../lib/getWSLStandings";
 
 export default async function WSLPage() {
   const standings = await getWSLStandings();
@@ -78,4 +78,3 @@ export default async function WSLPage() {
     </main>
   );
 }
-
