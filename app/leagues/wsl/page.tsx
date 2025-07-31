@@ -1,6 +1,6 @@
 import NavBar from "../../components/NavBar";
 import Link from "next/link";
-import { getWSLStandings } from "@/lib/getWSLStandings";
+import { getWSLStandings } from "../../../lib/getWSLStandings";
 
 export default async function WSLPage() {
   const standings = await getWSLStandings();
