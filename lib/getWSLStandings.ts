@@ -5,7 +5,7 @@ export async function getWSLStandings() {
       headers: {
         "x-apisports-key": process.env.NEXT_PUBLIC_FOOTBALL_API_KEY!,
       },
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 3600 },
     }
   );
 
