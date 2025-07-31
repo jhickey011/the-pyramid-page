@@ -3,7 +3,7 @@ export async function getWSLStandings() {
     "https://v3.football.api-sports.io/standings?league=44&season=2025",
     {
       headers: {
-        "x-apisports-key": process.env.NEXT_PUBLIC_FOOTBALL_API_KEY!,
+        "x-apisports-key": process.env.NEXT_PUBLIC_FOOTBALL_API_KEY,
       },
       next: { revalidate: 3600 },
     }
