@@ -2,7 +2,7 @@ export async function getWSLStandings() {
   console.log("API KEY CHECK:", process.env.NEXT_PUBLIC_FOOTBALL_API);
   
   const response = await fetch(
-    "https://v3.football.api-sports.io/standings?league=99&season=2025",
+    "https://v3.football.api-sports.io/standings?league=98&season=2025",
     {
       headers: {
         "x-apisports-key": process.env.NEXT_PUBLIC_FOOTBALL_API!,
