@@ -10,6 +10,5 @@ export async function getWSLStandings() {
   );
 
   const data = await response.json();
-  console.log("WSL Standings:", standings);
   return data.response[0]?.league?.standings[0] || [];
 }
