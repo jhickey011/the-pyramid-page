@@ -4,7 +4,8 @@ import NavBar from "@/components/NavBar";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
-        <div className="p-8 max-w-6xl mx-auto">
+      <NavBar />
+      <div className="p-8 max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-10 text-red-800">The Pyramid Page</h1>
 
         {/* Tier 1: WSL */}
@@ -47,4 +48,3 @@ export default function HomePage() {
     </main>
   );
 }
-
