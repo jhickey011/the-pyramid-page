@@ -1,6 +1,6 @@
 export async function getWSLFixtures() {
   const res = await fetch(
-    "https://v3.football.api-sports.io/fixtures?league=44&season=2025",
+    "https://v3.football.api-sports.io/fixtures?league=44&season=2023",
     {
       headers: {
         "x-apisports-key": process.env.NEXT_PUBLIC_FOOTBALL_API!,
