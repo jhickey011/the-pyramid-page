@@ -1,5 +1,5 @@
 import { getWSLFixtures } from "../../../../lib/getWSLFixtures";
-import NavBar from "@/components/NavBar";
+import NavBar from "../../../components/NavBar";
 
 function formatDate(dateString: string) {
   const options: Intl.DateTimeFormatOptions = {
