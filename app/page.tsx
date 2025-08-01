@@ -32,10 +32,10 @@ export default function Home() {
 
           {/* League Links */}
           <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 text-lg sm:text-xl font-bold z-10">
-            <Link href="/league/WSL" className="neon-glow hover:text-green-400 transition">WSL</Link>
-            <Link href="/league/Championship" className="neon-glow hover:text-green-400 transition">Championship</Link>
+            <Link href="/leagues/WSL" className="neon-glow hover:text-green-400 transition">WSL</Link>
+            <Link href="/leagues/Championship" className="neon-glow hover:text-green-400 transition">Championship</Link>
             <div className="flex gap-6">
-              <Link href="/league/national-north" className="neon-glow hover:text-green-400 transition">
+              <Link href="/leagues/national-north" className="neon-glow hover:text-green-400 transition">
                 National League North
               </Link>
               <Link href="/league/national-south" className="neon-glow hover:text-green-400 transition">
