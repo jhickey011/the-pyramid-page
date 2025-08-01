@@ -1,28 +1,50 @@
 'use client';
 import Link from 'next/link';
-import NavBar from "@/components/NavBar";
+
+// Simple NavBar component
+const NavBar = () => (
+  <nav className="w-full bg-gray-950 text-green-300 p-4 shadow-md">
+    <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 className="text-xl font-bold">League Portal</h1>
+      <div className="space-x-4 text-sm sm:text-base">
+        <Link href="/" className="hover:text-green-400 transition">Home</Link>
+        <Link href="/league/WSL" className="hover:text-green-400 transition">WSL</Link>
+        <Link href="/league/Championship" className="hover:text-green-400 transition">Championship</Link>
+      </div>
+    </div>
+  </nav>
+);
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-neon flex items-center justify-center p-4">
-      <div className="relative w-[300px] h-[260px] sm:w-[400px] sm:h-[340px] md:w-[500px] md:h-[420px]">
-        {/* SVG Triangle */}
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="xMidYMid meet"
-          className="absolute inset-0 w-full h-full text-green-500 opacity-10"
-        >
-          <polygon points="50,0 100,100 0,100" fill="currentColor" />
-        </svg>
+    <>
+      <NavBar />
+      <div className="min-h-screen bg-gray-900 text-green-300 flex items-center justify-center p-4">
+        <div className="relative w-[300px] h-[280px] sm:w-[400px] sm:h-[360px] md:w-[500px] md:h-[440px]">
+          {/* Background Triangle */}
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid meet"
+            className="absolute inset-0 w-full h-full text-green-500 opacity-10"
+          >
+            <polygon points="50,0 100,100 0,100" fill="currentColor" />
+          </svg>
 
-        {/* League Links */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 text-lg sm:text-xl font-bold z-10">
-          <Link href="/wsl" className="neon-glow hover:text-green-400 transition">WSL</Link>
-          <Link href="/championship" className="neon-glow hover:text-green-400 transition">Championship</Link>
-          <Link href="/national-league/north" className="neon-glow hover:text-green-400 transition">National League North</Link>
-          <Link href="/national-league/south" className="neon-glow hover:text-green-400 transition">National League South</Link>
+          {/* League Links */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 text-lg sm:text-xl font-bold z-10">
+            <Link href="/league/WSL" className="neon-glow hover:text-green-400 transition">WSL</Link>
+            <Link href="/league/Championship" className="neon-glow hover:text-green-400 transition">Championship</Link>
+            <div className="flex gap-6">
+              <Link href="/league/national-north" className="neon-glow hover:text-green-400 transition">
+                National League North
+              </Link>
+              <Link href="/league/national-south" className="neon-glow hover:text-green-400 transition">
+                National League South
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
