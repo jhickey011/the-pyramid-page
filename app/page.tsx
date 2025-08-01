@@ -35,10 +35,10 @@ export default function Home() {
             <Link href="/leagues/WSL" className="neon-glow hover:text-green-400 transition">WSL</Link>
             <Link href="/leagues/Championship" className="neon-glow hover:text-green-400 transition">Championship</Link>
             <div className="flex gap-6">
-              <Link href="/leagues/national-north" className="neon-glow hover:text-green-400 transition">
+              <Link href="/leagues/national-league<br />Northern-Premier<" className="neon-glow hover:text-green-400 transition">
                 National League North
               </Link>
-              <Link href="/league/national-south" className="neon-glow hover:text-green-400 transition">
+              <Link href="/league/national-league<br />Southern-Premier<" className="neon-glow hover:text-green-400 transition">
                 National League South
               </Link>
             </div>
