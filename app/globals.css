@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  .neon-glow {
+.neon-glow {
   text-shadow:
     0 0 5px #39ff14,
     0 0 10px #39ff14,
     0 0 20px #39ff14;
 }
-  @apply bg-white text-gray-900;
+
+
+body {
+  @apply gray-900 text-neon;
 }
