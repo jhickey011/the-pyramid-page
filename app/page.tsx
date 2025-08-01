@@ -34,14 +34,14 @@ export default function Home() {
           <div className="absolute inset-0 flex flex-col justify-center items-center gap-4 text-lg sm:text-xl font-bold z-10">
             <Link href="/leagues/WSL" className="neon-glow hover:text-green-400 transition">WSL</Link>
             <Link href="/leagues/Championship" className="neon-glow hover:text-green-400 transition">Championship</Link>
-            <div className="flex gap-6">
-              <Link href="/leagues/national-league<br />Northern-Premier<" className="neon-glow hover:text-green-400 transition">
-                National League North
-              </Link>
-              <Link href="/league/national-league<br />Southern-Premier<" className="neon-glow hover:text-green-400 transition">
-                National League South
-              </Link>
-            </div>
+            <div className="flex flex-wrap justify-center gap-4 text-center max-w-xs sm:max-w-sm">
+  <Link href="/leagues/national-northern-premier" className="break-words hover:text-pink-400 transition font-semibold">
+    National League<br />North
+  </Link>
+  <Link href="/leagues/national-southern-premier" className="break-words hover:text-pink-400 transition font-semibold">
+    National League<br />South
+  </Link>
+</div>
           </div>
         </div>
       </div>
