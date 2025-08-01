@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <NavBar />
       <div className="min-h-screen bg-gray-900 text-green-300 flex items-center justify-center p-4">
-        <div className="relative w-full max-w-[800px] h-[500px] sm:h-[550px] md:h-[800px]">
+        <div className="relative w-full max-w-[800px] h-[700px] sm:h-[750px] md:h-[800px]">
           {/* Background Triangle */}
           <svg
             viewBox="0 0 100 100"
