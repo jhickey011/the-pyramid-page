@@ -20,12 +20,12 @@ export default function Home() {
     <>
       <NavBar />
       <div className="min-h-screen bg-gray-900 text-green-300 flex items-center justify-center p-4">
-        <div className="relative w-[300px] h-[280px] sm:w-[400px] sm:h-[360px] md:w-[500px] md:h-[440px]">
+        <div className="relative w-full max-w-[600px] h-[500px] sm:h-[550px] md:h-[600px]">
           {/* Background Triangle */}
           <svg
             viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid meet"
-            className="absolute inset-0 w-full h-full text-green-500 opacity-10"
+            preserveAspectRatio="xMidYMid slice"
+            className="absolute inset-0 w-full h-full text-pink-500 opacity-10"
           >
             <polygon points="50,0 100,100 0,100" fill="currentColor" />
           </svg>
