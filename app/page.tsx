@@ -57,12 +57,12 @@ export default function Home() {
         {/* Tier 3: National League North & South */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl w-full">
           <LeagueCard
-            name="National League North"
+            name="Northern Premier"
             href="/leagues/national-north"
             tier="Tier 3"
           />
           <LeagueCard
-            name="National League South"
+            name="Southern Premier"
             href="/leagues/national-south"
             tier="Tier 3"
           />
