@@ -1,7 +1,34 @@
 'use client';
 import Link from 'next/link';
 
-// Optional NavBar
+// Sample icons (swap these with real ones as needed)
+const leagues = [
+  {
+    name: 'WSL',
+    href: '/leagues/wsl',
+    tier: 'Tier 1',
+    icon: '/images/wsl.png', // Use empty string '' if no icon
+  },
+  {
+    name: 'Championship',
+    href: '/leagues/championship',
+    tier: 'Tier 2',
+    icon: '/images/championship.png',
+  },
+  {
+    name: 'National League North',
+    href: '/leagues/national-north',
+    tier: 'Tier 3',
+    icon: '',
+  },
+  {
+    name: 'National League South',
+    href: '/leagues/national-south',
+    tier: 'Tier 3',
+    icon: '',
+  },
+];
+
 const NavBar = () => (
   <nav className="w-full bg-gray-950 text-pink-300 p-4 shadow-md">
     <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -19,62 +46,28 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="min-h-screen bg-gray-900 text-pink-400 flex items-center justify-center p-4">
-        <div className="relative w-full max-w-[600px] h-[600px] sm:h-[650px] md:h-[700px]">
-          {/* Background Triangle */}
-          <svg
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid slice"
-            className="absolute inset-0 w-full h-full text-pink-500 opacity-10"
-          >
-            <polygon points="50,0 100,100 0,100" fill="currentColor" />
-          </svg>
-
-          {/* Main Layout: Tiers + League Links */}
-          <div className="absolute inset-0 flex items-center justify-center z-10">
-            {/* Tiers (left side) */}
-            <div className="flex flex-col justify-between h-full py-12 pr-4 text-right text-sm sm:text-base text-pink-300 font-medium">
-              <div className="h-1/3 flex items-start justify-end">
-                <span>Tier 1</span>
-              </div>
-              <div className="h-1/3 flex items-center justify-end">
-                <span>Tier 2</span>
-              </div>
-              <div className="h-1/3 flex items-end justify-end">
-                <span>Tier 3</span>
-              </div>
-            </div>
-
-            {/* League Links (right side) */}
-            <div className="flex flex-col justify-between h-full py-12 gap-4 text-center text-lg sm:text-xl font-bold">
-              <div>
-                <Link href="/leagues/wsl" className="hover:text-pink-300 transition font-semibold">
-                  WSL
-                </Link>
-              </div>
-              <div>
-                <Link href="/leagues/championship" className="hover:text-pink-300 transition font-semibold">
-                  Championship
-                </Link>
-              </div>
-              <div className="flex flex-wrap justify-center gap-6 max-w-xs text-center">
-                <Link
-                  href="/leagues/national-north"
-                  className="break-words hover:text-pink-300 transition font-semibold"
-                >
-                  National League<br />North
-                </Link>
-                <Link
-                  href="/leagues/national-south"
-                  className="break-words hover:text-pink-300 transition font-semibold"
-                >
-                  National League<br />South
-                </Link>
-              </div>
-            </div>
-          </div>
+      <main className="min-h-screen bg-gray-900 text-pink-400 px-6 py-10 flex flex-col items-center">
+        <h2 className="text-2xl font-bold mb-8">Select a League</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl w-full">
+          {leagues.map((league) => (
+            <Link
+              key={league.href}
+              href={league.href}
+              className="bg-gray-800 hover:bg-gray-700 p-6 rounded-2xl shadow-md transition flex flex-col items-center text-center"
+            >
+              {league.icon && (
+                <img
+                  src={league.icon}
+                  alt={`${league.name} logo`}
+                  className="h-16 mb-4"
+                />
+              )}
+              <h3 className="text-xl font-semibold">{league.name}</h3>
+              <p className="text-sm text-pink-300 mt-1">{league.tier}</p>
+            </Link>
+          ))}
         </div>
-      </div>
+      </main>
     </>
   );
 }
