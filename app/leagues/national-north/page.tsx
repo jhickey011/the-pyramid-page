@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const leagueTable = [
   { pos: 1, team: 'Burnley Ladies', pts: 0 },
@@ -16,7 +17,50 @@ const leagueTable = [
   { pos: 12, team: 'Wolverhampton Wanderers Women', pts: 0 },
 ];
 
+type Fixture = {
+  date: string;
+  home: string;
+  away: string;
+  venue: string;
+};
+
 export default function NationalNorthPage() {
+  const [nextFixtures, setNextFixtures] = useState<Fixture[]>([]);
+  const [recentResults, setRecentResults] = useState<Fixture[]>([]);
+  const [nextDate, setNextDate] = useState<string | null>(null);
+  const [lastDate, setLastDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/leagues/national-north/fixtures.json')
+      .then(res => res.json())
+      .then((data: Fixture[]) => {
+        const today = new Date();
+        const upcoming: Record<string, Fixture[]> = {};
+        const recent: Record<string, Fixture[]> = {};
+
+        data.forEach(fixture => {
+          const date = new Date(fixture.date);
+          const dateKey = date.toISOString().split('T')[0];
+
+          if (date >= today) {
+            if (!upcoming[dateKey]) upcoming[dateKey] = [];
+            upcoming[dateKey].push(fixture);
+          } else {
+            if (!recent[dateKey]) recent[dateKey] = [];
+            recent[dateKey].push(fixture);
+          }
+        });
+
+        const next = Object.keys(upcoming).sort()[0];
+        const last = Object.keys(recent).sort().pop();
+
+        setNextDate(next || null);
+        setLastDate(last || null);
+        setNextFixtures(next ? upcoming[next] : []);
+        setRecentResults(last ? recent[last] : []);
+      });
+  }, []);
+
   return (
     <main className="bg-gray-900 text-pink-400 min-h-screen p-6 max-w-4xl mx-auto">
       {/* Nav Bar */}
@@ -27,11 +71,12 @@ export default function NationalNorthPage() {
         <h1 className="text-lg sm:text-xl font-semibold">
           Northern Premier Division
         </h1>
-        <button
+        <Link
+          href="/leagues/national-north/fixtures"
           className="bg-pink-500 hover:bg-pink-400 text-gray-900 px-4 py-2 rounded-lg font-semibold transition"
         >
           Fixtures & Results
-        </button>
+        </Link>
       </nav>
 
       {/* League Table */}
@@ -71,15 +116,42 @@ export default function NationalNorthPage() {
         </div>
       </section>
 
-      {/* Results & Fixtures Placeholders */}
+      {/* Results & Fixtures */}
       <section className="space-y-6">
         <div className="bg-gray-800 p-4 rounded-lg">
           <h3 className="text-lg font-bold text-pink-300 mb-2">Most Recent Results</h3>
-          <p className="text-gray-400">No results available yet.</p>
+          {recentResults.length > 0 ? (
+            <>
+              <p className="text-sm text-pink-400 mb-2">{lastDate}</p>
+              <ul className="space-y-1">
+                {recentResults.map((f, i) => (
+                  <li key={i}>
+                    {f.home} vs {f.away} – {f.venue}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="text-gray-400">No results available yet.</p>
+          )}
         </div>
+
         <div className="bg-gray-800 p-4 rounded-lg">
           <h3 className="text-lg font-bold text-pink-300 mb-2">Next Fixtures</h3>
-          <p className="text-gray-400">No upcoming fixtures yet.</p>
+          {nextFixtures.length > 0 ? (
+            <>
+              <p className="text-sm text-pink-400 mb-2">{nextDate}</p>
+              <ul className="space-y-1">
+                {nextFixtures.map((f, i) => (
+                  <li key={i}>
+                    {f.home} vs {f.away} – {f.venue}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="text-gray-400">No upcoming fixtures yet.</p>
+          )}
         </div>
       </section>
     </main>
