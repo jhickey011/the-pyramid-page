@@ -37,8 +37,16 @@ export default function NationalNorthPage() {
         const today = new Date();
         const upcoming: Record<string, Fixture[]> = {};
         const recent: Record<string, Fixture[]> = {};
+        const seen = new Set();
 
-        data.forEach(fixture => {
+        const deduped = data.filter(f => {
+          const key = [f.date, f.home, f.away].sort().join('|');
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+
+        deduped.forEach(fixture => {
           const date = new Date(fixture.date);
           const dateKey = date.toISOString().split('T')[0];
 
@@ -139,7 +147,14 @@ export default function NationalNorthPage() {
               <ul className="space-y-1">
                 {recentResults.map((f, i) => (
                   <li key={i}>
-                    {f.home} vs {f.away}
+                    <Link
+                      href={`/leagues/national-north/teams/${encodeURIComponent(f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.home}</Link> vs{' '}
+                    <Link
+                      href={`/leagues/national-north/teams/${encodeURIComponent(f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.away}</Link>
                   </li>
                 ))}
               </ul>
@@ -157,7 +172,14 @@ export default function NationalNorthPage() {
               <ul className="space-y-1">
                 {nextFixtures.map((f, i) => (
                   <li key={i}>
-                    {f.home} vs {f.away}
+                    <Link
+                      href={`/leagues/national-north/teams/${encodeURIComponent(f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.home}</Link> vs{' '}
+                    <Link
+                      href={`/leagues/national-north/teams/${encodeURIComponent(f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.away}</Link>
                   </li>
                 ))}
               </ul>
@@ -170,8 +192,16 @@ export default function NationalNorthPage() {
 
       {/* Latest Highlights */}
       <section className="mt-10 bg-gray-800 p-4 rounded-lg">
-        <h3 className="text-lg font-bold text-pink-300 mb-2">Latest Highlights</h3>
-        <p className="text-gray-400">Video highlights and goals will appear here soon.</p>
+        <h3 className="text-lg font-bold text-pink-300 mb-4">Latest Highlights</h3>
+        <div className="aspect-w-16 aspect-h-9">
+          <iframe
+            className="w-full h-72 rounded-lg"
+            src="https://www.youtube.com/embed/RjhUbFxf_Zs"
+            title="Latest Highlights"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </section>
     </main>
   );
