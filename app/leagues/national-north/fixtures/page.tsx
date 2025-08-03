@@ -25,14 +25,15 @@ export default function FixturesPage() {
           return true
         })
 
-        // Sort fixtures by date ascending
+        // Sort fixtures by date using proper ISO date parsing
         deduped.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
         const grouped: Record<string, Fixture[]> = {}
         deduped.forEach(f => {
-          const dateKey = new Date(f.date).toLocaleDateString()
-          if (!grouped[dateKey]) grouped[dateKey] = []
-          grouped[dateKey].push(f)
+          const dateObj = new Date(f.date)
+          const formatted = dateObj.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })
+          if (!grouped[formatted]) grouped[formatted] = []
+          grouped[formatted].push(f)
         })
 
         setGroupedFixtures(grouped)
@@ -43,7 +44,11 @@ export default function FixturesPage() {
     <main className="p-6 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4 text-pink-300">Fixtures & Results</h1>
       <div className="space-y-8">
-        {Object.entries(groupedFixtures).sort().map(([date, matches]) => (
+        {Object.entries(groupedFixtures).sort((a, b) => {
+          const dateA = new Date(a[0].split('/').reverse().join('-'))
+          const dateB = new Date(b[0].split('/').reverse().join('-'))
+          return dateA.getTime() - dateB.getTime()
+        }).map(([date, matches]) => (
           <div key={date}>
             <h2 className="text-lg font-bold text-pink-400 mb-2">{date}</h2>
             <table className="w-full text-sm border border-gray-300">
