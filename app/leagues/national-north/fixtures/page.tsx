@@ -25,13 +25,17 @@ export default function FixturesPage() {
           return true
         })
 
-        // Sort fixtures by date using proper ISO date parsing
+        // Sort fixtures by actual date
         deduped.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
         const grouped: Record<string, Fixture[]> = {}
         deduped.forEach(f => {
           const dateObj = new Date(f.date)
-          const formatted = dateObj.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })
+          const formatted = dateObj.toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+          })
           if (!grouped[formatted]) grouped[formatted] = []
           grouped[formatted].push(f)
         })
@@ -42,11 +46,27 @@ export default function FixturesPage() {
 
   return (
     <main className="p-6 max-w-4xl mx-auto">
+      {/* Navigation Tabs */}
+      <div className="flex justify-between mb-6">
+        <Link
+          href="/"
+          className="text-sm font-semibold bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-400"
+        >
+          ← Home
+        </Link>
+        <Link
+          href="/leagues/national-north"
+          className="text-sm font-semibold bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-400"
+        >
+          ← League Page
+        </Link>
+      </div>
+
       <h1 className="text-2xl font-bold mb-4 text-pink-300">Fixtures & Results</h1>
       <div className="space-y-8">
         {Object.entries(groupedFixtures).sort((a, b) => {
-          const dateA = new Date(a[0].split('/').reverse().join('-'))
-          const dateB = new Date(b[0].split('/').reverse().join('-'))
+          const dateA = new Date(a[0])
+          const dateB = new Date(b[0])
           return dateA.getTime() - dateB.getTime()
         }).map(([date, matches]) => (
           <div key={date}>
@@ -62,7 +82,7 @@ export default function FixturesPage() {
               </thead>
               <tbody>
                 {matches.map((f, idx) => (
-                  <tr key={idx} className="hover:bg-gray-50">
+                  <tr key={idx}>
                     <td className="p-2 border">
                       <Link
                         href={`/leagues/national-north/teams/${encodeURIComponent(
