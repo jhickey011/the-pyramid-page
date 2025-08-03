@@ -63,7 +63,7 @@ export default function Home() {
           />
           <LeagueCard
             name="Southern Premier"
-            href="/leagues/national-south"
+            href="/leagues/southern-premier"
             tier="Tier 3"
           />
         </div>
