@@ -21,14 +21,13 @@ type Fixture = {
   date: string;
   home: string;
   away: string;
+  time?: string;
   venue: string;
 };
 
 export default function NationalNorthPage() {
   const [nextFixtures, setNextFixtures] = useState<Fixture[]>([]);
-  const [recentResults, setRecentResults] = useState<Fixture[]>([]);
   const [nextDate, setNextDate] = useState<string | null>(null);
-  const [lastDate, setLastDate] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/leagues/national-north/fixtures.json')
@@ -36,28 +35,24 @@ export default function NationalNorthPage() {
       .then((data: Fixture[]) => {
         const today = new Date();
         const upcoming: Record<string, Fixture[]> = {};
-        const recent: Record<string, Fixture[]> = {};
+        const seen = new Set();
 
         data.forEach(fixture => {
+          const key = [fixture.home, fixture.away, fixture.date].sort().join('|');
+          if (seen.has(key)) return;
+          seen.add(key);
+
           const date = new Date(fixture.date);
           const dateKey = date.toISOString().split('T')[0];
-
           if (date >= today) {
             if (!upcoming[dateKey]) upcoming[dateKey] = [];
             upcoming[dateKey].push(fixture);
-          } else {
-            if (!recent[dateKey]) recent[dateKey] = [];
-            recent[dateKey].push(fixture);
           }
         });
 
         const next = Object.keys(upcoming).sort()[0];
-        const last = Object.keys(recent).sort().pop();
-
         setNextDate(next || null);
-        setLastDate(last || null);
         setNextFixtures(next ? upcoming[next] : []);
-        setRecentResults(last ? recent[last] : []);
       });
   }, []);
 
@@ -116,35 +111,20 @@ export default function NationalNorthPage() {
         </div>
       </section>
 
-      {/* Results & Fixtures */}
+      {/* Next Fixtures */}
       <section className="space-y-6">
-        <div className="bg-gray-800 p-4 rounded-lg">
-          <h3 className="text-lg font-bold text-pink-300 mb-2">Most Recent Results</h3>
-          {recentResults.length > 0 ? (
-            <>
-              <p className="text-sm text-pink-400 mb-2">{lastDate}</p>
-              <ul className="space-y-1">
-                {recentResults.map((f, i) => (
-                  <li key={i}>
-                    {f.home} vs {f.away} – {f.venue}
-                  </li>
-                ))}
-              </ul>
-            </>
-          ) : (
-            <p className="text-gray-400">No results available yet.</p>
-          )}
-        </div>
-
         <div className="bg-gray-800 p-4 rounded-lg">
           <h3 className="text-lg font-bold text-pink-300 mb-2">Next Fixtures</h3>
           {nextFixtures.length > 0 ? (
             <>
-              <p className="text-sm text-pink-400 mb-2">{nextDate}</p>
+              <h4 className="text-base font-semibold text-pink-200 mb-2">
+                {new Date(nextDate!).toLocaleDateString()}
+              </h4>
               <ul className="space-y-1">
                 {nextFixtures.map((f, i) => (
                   <li key={i}>
-                    {f.home} vs {f.away} – {f.venue}
+                    {f.home} vs {f.away}
+                    {f.time ? ` – ${f.time}` : ''}
                   </li>
                 ))}
               </ul>
