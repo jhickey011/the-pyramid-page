@@ -80,21 +80,22 @@ export default function NationalNorthPage() {
 
   return (
     <main className="bg-gray-900 text-pink-400 min-h-screen p-6 max-w-4xl mx-auto">
-      {/* Nav Bar */}
-      <nav className="bg-gray-950 text-pink-300 p-4 rounded-lg mb-8 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold hover:text-pink-400 transition">
+      {/* Nav Buttons */}
+      <div className="flex flex-wrap justify-between gap-4 mb-6">
+        <Link
+          href="/"
+          className="bg-pink-500 hover:bg-pink-400 text-gray-900 px-4 py-2 rounded-lg font-semibold transition"
+        >
           ← Home
         </Link>
-        <h1 className="text-lg sm:text-xl font-semibold">
-          Northern Premier Division
-        </h1>
+        <h1 className="text-lg sm:text-xl font-semibold m-auto">Northern Premier Division</h1>
         <Link
           href="/leagues/national-north/fixtures"
           className="bg-pink-500 hover:bg-pink-400 text-gray-900 px-4 py-2 rounded-lg font-semibold transition"
         >
           Fixtures & Results
         </Link>
-      </nav>
+      </div>
 
       {/* League Table */}
       <section className="mb-8">
