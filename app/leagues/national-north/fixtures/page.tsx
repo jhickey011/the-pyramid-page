@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 type Fixture = {
   date: string
-  time?: string
   home: string
   away: string
   venue: string
@@ -24,6 +24,9 @@ export default function FixturesPage() {
           seen.add(key)
           return true
         })
+
+        // Sort fixtures by date ascending
+        deduped.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
         const grouped: Record<string, Fixture[]> = {}
         deduped.forEach(f => {
@@ -48,7 +51,6 @@ export default function FixturesPage() {
                 <tr>
                   <th className="p-2 border">Home</th>
                   <th className="p-2 border">Away</th>
-                  <th className="p-2 border">Time</th>
                   <th className="p-2 border">Venue</th>
                   <th className="p-2 border">Tickets</th>
                 </tr>
@@ -56,9 +58,26 @@ export default function FixturesPage() {
               <tbody>
                 {matches.map((f, idx) => (
                   <tr key={idx} className="hover:bg-gray-50">
-                    <td className="p-2 border">{f.home}</td>
-                    <td className="p-2 border">{f.away}</td>
-                    <td className="p-2 border">{f.time || 'TBC'}</td>
+                    <td className="p-2 border">
+                      <Link
+                        href={`/leagues/national-north/teams/${encodeURIComponent(
+                          f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
+                        )}`}
+                        className="text-pink-500 hover:underline"
+                      >
+                        {f.home}
+                      </Link>
+                    </td>
+                    <td className="p-2 border">
+                      <Link
+                        href={`/leagues/national-north/teams/${encodeURIComponent(
+                          f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
+                        )}`}
+                        className="text-pink-500 hover:underline"
+                      >
+                        {f.away}
+                      </Link>
+                    </td>
                     <td className="p-2 border">{f.venue}</td>
                     <td className="p-2 border">
                       <a href="#" className="text-blue-500 underline">Tickets</a>
