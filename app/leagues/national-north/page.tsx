@@ -144,7 +144,7 @@ export default function NationalNorthPage() {
           <h3 className="text-lg font-bold text-pink-300 mb-2">Most Recent Results</h3>
           {recentResults.length > 0 ? (
             <>
-              <p className="text-base font-semibold text-pink-300 mb-2">{formatDate(lastDate!)}</p>
+              <h4 className="text-xl font-bold text-pink-200 mb-2">{formatDate(lastDate!)}</h4>
               <ul className="space-y-1">
                 {recentResults.map((f, i) => (
                   <li key={i}>
@@ -169,7 +169,7 @@ export default function NationalNorthPage() {
           <h3 className="text-lg font-bold text-pink-300 mb-2">Next Fixtures</h3>
           {nextFixtures.length > 0 ? (
             <>
-              <p className="text-base font-semibold text-pink-300 mb-2">{formatDate(nextDate!)}</p>
+              <h4 className="text-xl font-bold text-pink-200 mb-2">{formatDate(nextDate!)}</h4>
               <ul className="space-y-1">
                 {nextFixtures.map((f, i) => (
                   <li key={i}>
