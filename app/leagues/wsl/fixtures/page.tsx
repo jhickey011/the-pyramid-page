@@ -73,7 +73,7 @@ export default async function WSLFixturesPage() {
                   {formatDateHeader(date)}
                 </h3>
                 <ul className="space-y-2">
-                  {fixtures.map((f) => (
+                  {(fixtures as any[]).map((f) => (
                     <li
                       key={f.fixture.id}
                       className="grid grid-cols-6 gap-2 items-center text-sm bg-gray-800 p-2 rounded-lg"
@@ -117,7 +117,7 @@ export default async function WSLFixturesPage() {
                   {formatDateHeader(date)}
                 </h3>
                 <ul className="space-y-2">
-                  {fixtures.map((f) => (
+                  {(fixtures as any[]).map((f) => (
                     <li
                       key={f.fixture.id}
                       className="grid grid-cols-6 gap-2 items-center text-sm bg-gray-800 p-2 rounded-lg"
