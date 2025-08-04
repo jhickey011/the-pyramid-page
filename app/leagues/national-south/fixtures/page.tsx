@@ -1,0 +1,118 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+
+type Fixture = {
+  date: string
+  home: string
+  away: string
+  venue: string
+}
+
+export default function FixturesPage() {
+  const [groupedFixtures, setGroupedFixtures] = useState<Record<string, Fixture[]>>({})
+
+  useEffect(() => {
+    fetch('/leagues/southern-premier/fixtures.json')
+      .then(res => res.json())
+      .then((data: Fixture[]) => {
+        const seen = new Set()
+        const deduped = data.filter(f => {
+          const key = [f.date, f.home, f.away].sort().join('|')
+          if (seen.has(key)) return false
+          seen.add(key)
+          return true
+        })
+
+        deduped.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+
+        const grouped: Record<string, Fixture[]> = {}
+        deduped.forEach(f => {
+          const dateObj = new Date(f.date)
+          const formatted = dateObj.toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+          })
+          if (!grouped[formatted]) grouped[formatted] = []
+          grouped[formatted].push(f)
+        })
+
+        setGroupedFixtures(grouped)
+      })
+  }, [])
+
+  return (
+    <main className="p-6 max-w-4xl mx-auto">
+      {/* Navigation Tabs */}
+      <div className="flex justify-between mb-6">
+        <Link
+          href="/"
+          className="text-sm font-semibold bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-400"
+        >
+          ← Home
+        </Link>
+        <Link
+          href="/leagues/southern-premier"
+          className="text-sm font-semibold bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-400"
+        >
+          ← League Page
+        </Link>
+      </div>
+
+      <h1 className="text-2xl font-bold mb-4 text-pink-300">Fixtures & Results</h1>
+      <div className="space-y-8">
+        {Object.entries(groupedFixtures).sort((a, b) => {
+          const dateA = new Date(a[0])
+          const dateB = new Date(b[0])
+          return dateA.getTime() - dateB.getTime()
+        }).map(([date, matches]) => (
+          <div key={date}>
+            <h2 className="text-lg font-bold text-pink-400 mb-2">{date}</h2>
+            <table className="w-full text-sm border border-gray-300">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="p-2 border">Home</th>
+                  <th className="p-2 border">Away</th>
+                  <th className="p-2 border">Venue</th>
+                  <th className="p-2 border">Tickets</th>
+                </tr>
+              </thead>
+              <tbody>
+                {matches.map((f, idx) => (
+                  <tr key={idx}>
+                    <td className="p-2 border">
+                      <Link
+                        href={`/leagues/southern-premier/teams/${encodeURIComponent(
+                          f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
+                        )}`}
+                        className="text-pink-500 hover:underline"
+                      >
+                        {f.home}
+                      </Link>
+                    </td>
+                    <td className="p-2 border">
+                      <Link
+                        href={`/leagues/southern-premier/teams/${encodeURIComponent(
+                          f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
+                        )}`}
+                        className="text-pink-500 hover:underline"
+                      >
+                        {f.away}
+                      </Link>
+                    </td>
+                    <td className="p-2 border">{f.venue}</td>
+                    <td className="p-2 border">
+                      <a href="#" className="text-blue-500 underline">Tickets</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+      </div>
+    </main>
+  )
+}
