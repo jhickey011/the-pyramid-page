@@ -17,8 +17,68 @@ const leagueTable = [
   { pos: 12, team: 'Watford', pts: 0 },
 ];
 
-export default function SouthernPremierPage() {
-  return (
+type Fixture = {
+  date: string;
+  home: string;
+  away: string;
+  venue: string;
+};
+
+export default function NationalSouthPage() {
+  const [nextFixtures, setNextFixtures] = useState<Fixture[]>([]);
+    const [recentResults, setRecentResults] = useState<Fixture[]>([]);
+    const [nextDate, setNextDate] = useState<string | null>(null);
+    const [lastDate, setLastDate] = useState<string | null>(null);
+    
+    useEffect(() => {
+        fetch('/leagues/national-south/fixtures.json')
+          .then(res => res.json())
+          .then((data: Fixture[]) => {
+            const today = new Date();
+            const upcoming: Record<string, Fixture[]> = {};
+            const recent: Record<string, Fixture[]> = {};
+            const seen = new Set();
+    
+            const deduped = data.filter(f => {
+              const key = [f.date, f.home, f.away].sort().join('|');
+              if (seen.has(key)) return false;
+              seen.add(key);
+              return true;
+            });
+    
+            deduped.forEach(fixture => {
+              const date = new Date(fixture.date);
+              const dateKey = date.toISOString().split('T')[0];
+    
+              if (date >= today) {
+                if (!upcoming[dateKey]) upcoming[dateKey] = [];
+                upcoming[dateKey].push(fixture);
+              } else {
+                if (!recent[dateKey]) recent[dateKey] = [];
+                recent[dateKey].push(fixture);
+              }
+            });
+    
+            const next = Object.keys(upcoming).sort()[0];
+            const last = Object.keys(recent).sort().pop();
+    
+            setNextDate(next || null);
+            setLastDate(last || null);
+            setNextFixtures(next ? upcoming[next] : []);
+            setRecentResults(last ? recent[last] : []);
+          });
+      }, []);
+    
+      const formatDate = (isoDate: string) => {
+        const dateObj = new Date(isoDate);
+        return dateObj.toLocaleDateString('en-GB', {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+        });
+      };
+      
+    return (
     <main className="bg-gray-900 text-pink-400 min-h-screen p-6 max-w-4xl mx-auto">
       {/* Nav Buttons */}
       <div className="flex flex-wrap justify-between gap-4 mb-6">
@@ -78,6 +138,59 @@ export default function SouthernPremierPage() {
         </div>
       </section>
 
+      {/* Results & Fixtures */}
+      <section className="space-y-6">
+        <div className="bg-gray-800 p-4 rounded-lg">
+          <h3 className="text-lg font-bold text-pink-300 mb-2">Most Recent Results</h3>
+          {recentResults.length > 0 ? (
+            <>
+              <h4 className="text-xl font-bold text-pink-200 mb-2">{formatDate(lastDate!)}</h4>
+              <ul className="space-y-1">
+                {recentResults.map((f, i) => (
+                  <li key={i}>
+                    <Link
+                      href={`/leagues/national-south/teams/${encodeURIComponent(f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.home}</Link> vs{' '}
+                    <Link
+                      href={`/leagues/national-south/teams/${encodeURIComponent(f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.away}</Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="text-gray-400">No results available yet.</p>
+          )}
+        </div>
+
+        <div className="bg-gray-800 p-4 rounded-lg">
+          <h3 className="text-lg font-bold text-pink-300 mb-2">Next Fixtures</h3>
+          {nextFixtures.length > 0 ? (
+            <>
+              <h4 className="text-xl font-bold text-pink-200 mb-2">{formatDate(nextDate!)}</h4>
+              <ul className="space-y-1">
+                {nextFixtures.map((f, i) => (
+                  <li key={i}>
+                    <Link
+                      href={`/leagues/national-south/teams/${encodeURIComponent(f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.home}</Link> vs{' '}
+                    <Link
+                      href={`/leagues/national-south/teams/${encodeURIComponent(f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''))}`}
+                      className="text-pink-400 hover:underline"
+                    >{f.away}</Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="text-gray-400">No upcoming fixtures yet.</p>
+          )}
+        </div>
+      </section>
+      
       {/* Latest Highlights */}
       <section className="mt-10 bg-gray-800 p-4 rounded-lg">
         <h3 className="text-lg font-bold text-pink-300 mb-4">Latest Highlights</h3>
