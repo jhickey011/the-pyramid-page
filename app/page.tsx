@@ -4,7 +4,10 @@ import Link from 'next/link';
 const NavBar = () => (
   <nav className="w-full bg-gray-950 text-pink-300 p-4 shadow-md">
     <div className="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 className="text-xl font-bold">League Portal</h1>
+      <Link href="/" className="flex items-center space-x-2">
+        <img src="/logos/PP_Logo_64px.png" alt="PP Logo" className="h-10 w-auto" />
+        <span className="text-xl font-bold hidden sm:inline">League Portal</span>
+      </Link>
       <div className="space-x-4 text-sm sm:text-base">
         <Link href="/" className="hover:text-pink-400 transition">Home</Link>
         <Link href="/leagues/wsl" className="hover:text-pink-400 transition">WSL</Link>
