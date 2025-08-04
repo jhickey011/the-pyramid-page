@@ -14,7 +14,7 @@ export default function FixturesPage() {
   const [groupedFixtures, setGroupedFixtures] = useState<Record<string, Fixture[]>>({})
 
   useEffect(() => {
-    fetch('/leagues/southern-premier/fixtures.json')
+    fetch('/leagues/national-south/fixtures.json')
       .then(res => res.json())
       .then((data: Fixture[]) => {
         const seen = new Set()
@@ -54,7 +54,7 @@ export default function FixturesPage() {
           ← Home
         </Link>
         <Link
-          href="/leagues/southern-premier"
+          href="/leagues/national-south"
           className="text-sm font-semibold bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-400"
         >
           ← League Page
@@ -84,7 +84,7 @@ export default function FixturesPage() {
                   <tr key={idx}>
                     <td className="p-2 border">
                       <Link
-                        href={`/leagues/southern-premier/teams/${encodeURIComponent(
+                        href={`/leagues/national-south/teams/${encodeURIComponent(
                           f.home.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
                         )}`}
                         className="text-pink-500 hover:underline"
@@ -94,7 +94,7 @@ export default function FixturesPage() {
                     </td>
                     <td className="p-2 border">
                       <Link
-                        href={`/leagues/southern-premier/teams/${encodeURIComponent(
+                        href={`/leagues/national-south/teams/${encodeURIComponent(
                           f.away.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
                         )}`}
                         className="text-pink-500 hover:underline"

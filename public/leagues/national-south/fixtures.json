@@ -1,0 +1,826 @@
+[
+  {
+    "date": "2025-08-17",
+    "home": "AFC Bournemouth",
+    "away": "Billericay Town",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2025-08-17",
+    "home": "AFC Wimbledon",
+    "away": "Real Bedford",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Gwalia United",
+    "away": "Oxford United",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Cheltenham Town",
+    "away": "Exeter City",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Lewes",
+    "away": "Watford",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Plymouth Argyle",
+    "away": "Hashtag United",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Billericay Town",
+    "away": "Gwalia United",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Exeter City",
+    "away": "Lewes",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Hashtag United",
+    "away": "AFC Bournemouth",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Oxford United",
+    "away": "AFC Wimbledon",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Real Bedford",
+    "away": "Cheltenham Town",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Watford",
+    "away": "Plymouth Argyle",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2025-08-31",
+    "home": "AFC Bournemouth",
+    "away": "Exeter City",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2025-08-31",
+    "home": "AFC Wimbledon",
+    "away": "Watford",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Gwalia United",
+    "away": "Hashtag United",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Cheltenham Town",
+    "away": "Oxford United",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Lewes",
+    "away": "Real Bedford",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Plymouth Argyle",
+    "away": "Billericay Town",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Billericay Town",
+    "away": "Real Bedford",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Gwalia United",
+    "away": "AFC Bournemouth",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Cheltenham Town",
+    "away": "Watford",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Hashtag United",
+    "away": "Lewes",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Oxford United",
+    "away": "Exeter City",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Plymouth Argyle",
+    "away": "AFC Wimbledon",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2025-09-21",
+    "home": "AFC Bournemouth",
+    "away": "Cheltenham Town",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2025-09-21",
+    "home": "AFC Wimbledon",
+    "away": "Gwalia United",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Exeter City",
+    "away": "Hashtag United",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Lewes",
+    "away": "Plymouth Argyle",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Real Bedford",
+    "away": "Oxford United",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Watford",
+    "away": "Billericay Town",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2025-10-05",
+    "home": "AFC Bournemouth",
+    "away": "Lewes",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Billericay Town",
+    "away": "AFC Wimbledon",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Gwalia United",
+    "away": "Real Bedford",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Cheltenham Town",
+    "away": "Plymouth Argyle",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Exeter City",
+    "away": "Watford",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Hashtag United",
+    "away": "Oxford United",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2025-10-12",
+    "home": "AFC Wimbledon",
+    "away": "Cheltenham Town",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Lewes",
+    "away": "Gwalia United",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Oxford United",
+    "away": "Billericay Town",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Plymouth Argyle",
+    "away": "AFC Bournemouth",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Real Bedford",
+    "away": "Exeter City",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Watford",
+    "away": "Hashtag United",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2025-10-29",
+    "home": "AFC Bournemouth",
+    "away": "Oxford United",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Exeter City",
+    "away": "Plymouth Argyle",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Hashtag United",
+    "away": "Billericay Town",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Lewes",
+    "away": "AFC Wimbledon",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Watford",
+    "away": "Real Bedford",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2025-10-30",
+    "home": "Gwalia United",
+    "away": "Cheltenham Town",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2025-11-02",
+    "home": "AFC Wimbledon",
+    "away": "AFC Bournemouth",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Billericay Town",
+    "away": "Exeter City",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Cheltenham Town",
+    "away": "Lewes",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Oxford United",
+    "away": "Watford",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Plymouth Argyle",
+    "away": "Gwalia United",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Real Bedford",
+    "away": "Hashtag United",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Billericay Town",
+    "away": "Lewes",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Exeter City",
+    "away": "AFC Wimbledon",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Hashtag United",
+    "away": "Cheltenham Town",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Oxford United",
+    "away": "Plymouth Argyle",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Real Bedford",
+    "away": "AFC Bournemouth",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Watford",
+    "away": "Gwalia United",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2025-11-30",
+    "home": "AFC Bournemouth",
+    "away": "Watford",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2025-11-30",
+    "home": "AFC Wimbledon",
+    "away": "Hashtag United",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Gwalia United",
+    "away": "Exeter City",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Cheltenham Town",
+    "away": "Billericay Town",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Lewes",
+    "away": "Oxford United",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Plymouth Argyle",
+    "away": "Real Bedford",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Billericay Town",
+    "away": "AFC Bournemouth",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Exeter City",
+    "away": "Cheltenham Town",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Hashtag United",
+    "away": "Plymouth Argyle",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Oxford United",
+    "away": "Gwalia United",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Real Bedford",
+    "away": "AFC Wimbledon",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Watford",
+    "away": "Lewes",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Plymouth Argyle",
+    "away": "Watford",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2026-01-04",
+    "home": "AFC Bournemouth",
+    "away": "Hashtag United",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2026-01-04",
+    "home": "AFC Wimbledon",
+    "away": "Oxford United",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Gwalia United",
+    "away": "Billericay Town",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Cheltenham Town",
+    "away": "Real Bedford",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Lewes",
+    "away": "Exeter City",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Billericay Town",
+    "away": "Plymouth Argyle",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Exeter City",
+    "away": "AFC Bournemouth",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Hashtag United",
+    "away": "Gwalia United",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Oxford United",
+    "away": "Cheltenham Town",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Real Bedford",
+    "away": "Lewes",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Watford",
+    "away": "AFC Wimbledon",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2026-02-08",
+    "home": "AFC Bournemouth",
+    "away": "AFC Wimbledon",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Gwalia United",
+    "away": "Plymouth Argyle",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Exeter City",
+    "away": "Billericay Town",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Hashtag United",
+    "away": "Real Bedford",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Lewes",
+    "away": "Cheltenham Town",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Watford",
+    "away": "Oxford United",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2026-02-18",
+    "home": "AFC Wimbledon",
+    "away": "Lewes",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2026-02-18",
+    "home": "Billericay Town",
+    "away": "Hashtag United",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2026-02-18",
+    "home": "Oxford United",
+    "away": "AFC Bournemouth",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2026-02-18",
+    "home": "Plymouth Argyle",
+    "away": "Exeter City",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2026-02-18",
+    "home": "Real Bedford",
+    "away": "Watford",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Cheltenham Town",
+    "away": "Gwalia United",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2026-02-22",
+    "home": "AFC Bournemouth",
+    "away": "Gwalia United",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2026-02-22",
+    "home": "AFC Wimbledon",
+    "away": "Plymouth Argyle",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Exeter City",
+    "away": "Oxford United",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Lewes",
+    "away": "Hashtag United",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Real Bedford",
+    "away": "Billericay Town",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Watford",
+    "away": "Cheltenham Town",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Billericay Town",
+    "away": "Watford",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Gwalia United",
+    "away": "AFC Wimbledon",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Cheltenham Town",
+    "away": "AFC Bournemouth",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Hashtag United",
+    "away": "Exeter City",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Oxford United",
+    "away": "Real Bedford",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Plymouth Argyle",
+    "away": "Lewes",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2026-03-22",
+    "home": "AFC Bournemouth",
+    "away": "Plymouth Argyle",
+    "venue": "Ringwood Town Football Club"
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Billericay Town",
+    "away": "Oxford United",
+    "venue": "Billericay Town FC (New Lodge)"
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Gwalia United",
+    "away": "Lewes",
+    "venue": "University of South Wales Sports Park"
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Cheltenham Town",
+    "away": "AFC Wimbledon",
+    "venue": "Bishops Cleeve FC"
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Exeter City",
+    "away": "Real Bedford",
+    "venue": "Exeter City Football Club"
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Hashtag United",
+    "away": "Watford",
+    "venue": "Parkside (Aveley Football Club)"
+  },
+  {
+    "date": "2026-03-29",
+    "home": "AFC Wimbledon",
+    "away": "Billericay Town",
+    "venue": "AFC Wimbledon"
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Lewes",
+    "away": "AFC Bournemouth",
+    "venue": "Lewes FC (The Dripping Pan)"
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Oxford United",
+    "away": "Hashtag United",
+    "venue": "Oxford City FC (Court Place Farm)"
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Plymouth Argyle",
+    "away": "Cheltenham Town",
+    "venue": "Plymouth Argyle FC (Home Park)"
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Real Bedford",
+    "away": "Gwalia United",
+    "venue": "Ledger Stadium (Real Bedford FC)"
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Watford",
+    "away": "Exeter City",
+    "venue": "Grosvenor Vale"
+  },
+  {
+    "date": "12/04/26",
+    "time": "14:00",
+    "home_team": "AFC Bournemouth",
+    "away_team": "Real Bedford",
+    "venue": "RINGWOOD TOWN FOOTBALL CLUB",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "12/04/26",
+    "time": "14:00",
+    "home_team": "AFC Wimbledon",
+    "away_team": "Exeter City",
+    "venue": "AFC WIMBLEDON",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "12/04/26",
+    "time": "14:00",
+    "home_team": "Gwalla United",
+    "away_team": "Watford",
+    "venue": "UNIVERSITY OF SOUTH WALES SPORTS PARK",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "12/04/26",
+    "time": "14:00",
+    "home_team": "Cheltenham Town",
+    "away_team": "Hashtag United",
+    "venue": "BISHOPS CLEEVE FC",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "12/04/26",
+    "time": "14:00",
+    "home_team": "Lewes",
+    "away_team": "Billericay Town",
+    "venue": "LEWES FC (THE DRIPPING PAN)",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "12/04/26",
+    "time": "14:00",
+    "home_team": "Plymouth Argyle",
+    "away_team": "Oxford United",
+    "venue": "PLYMOUTH ARGYLE FC (HOME PARK)",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "26/04/26",
+    "time": "14:00",
+    "home_team": "Billericay Town",
+    "away_team": "Cheltenham Town",
+    "venue": "BILLERICAY TOWN FC (NEW LODGE)",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "26/04/26",
+    "time": "14:00",
+    "home_team": "Exeter City",
+    "away_team": "Gwalla United",
+    "venue": "EXETER CITY FOOTBALL CLUB",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "26/04/26",
+    "time": "14:00",
+    "home_team": "Hashtag United",
+    "away_team": "AFC Wimbledon",
+    "venue": "PARKSIDE (AVELEY FOOTBALL CLUB)",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "26/04/26",
+    "time": "14:00",
+    "home_team": "Oxford United",
+    "away_team": "Lewes",
+    "venue": "OXFORD CITY FC (COURT PLACE FARM)",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "26/04/26",
+    "time": "14:00",
+    "home_team": "Real Bedford",
+    "away_team": "Plymouth Argyle",
+    "venue": "LEDGER STADIUM (REAL BEDFORD FC)",
+    "competition": "Southern Premier Division"
+  },
+  {
+    "date": "26/04/26",
+    "time": "14:00",
+    "home_team": "Watford",
+    "away_team": "AFC Bournemouth",
+    "venue": "GROSVENOR VALE",
+    "competition": "Southern Premier Division"
+  }
+]
+
+
+
+
+
+
+
+
