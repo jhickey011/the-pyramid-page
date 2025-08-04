@@ -1,8 +1,9 @@
+'use client';
 import { getWSLFixtures } from "@/lib/getWSLFixtures";
-import NavBar from "@/components/NavBar";
+import Link from 'next/link';
 
-function formatDateHeader(dateString: string) {
-  return new Date(dateString).toLocaleDateString("en-UK", {
+function formatDateHeader(dateString) {
+  return new Date(dateString).toLocaleDateString("en-GB", {
     weekday: "long",
     month: "long",
     day: "numeric",
@@ -10,8 +11,8 @@ function formatDateHeader(dateString: string) {
   });
 }
 
-function formatTime(dateString: string) {
-  return new Date(dateString).toLocaleTimeString("en-UK", {
+function formatTime(dateString) {
+  return new Date(dateString).toLocaleTimeString("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
   });
@@ -21,18 +22,16 @@ export default async function WSLFixturesPage() {
   const fixtures = await getWSLFixtures();
   const now = new Date();
 
-  // Separate into results and upcoming
   const results = fixtures.filter(
-    (f: any) => new Date(f.fixture.date) < now && f.fixture.status.short === "FT"
+    (f) => new Date(f.fixture.date) < now && f.fixture.status.short === "FT"
   );
   const upcoming = fixtures.filter(
-    (f: any) => new Date(f.fixture.date) >= now || f.fixture.status.short !== "FT"
+    (f) => new Date(f.fixture.date) >= now || f.fixture.status.short !== "FT"
   );
 
-  // Group by date helper
-  function groupByDate(data: any[]) {
-    const grouped: Record<string, any[]> = {};
-    data.forEach((fixture: any) => {
+  function groupByDate(data) {
+    const grouped = {};
+    data.forEach((fixture) => {
       const dateKey = new Date(fixture.fixture.date).toDateString();
       if (!grouped[dateKey]) grouped[dateKey] = [];
       grouped[dateKey].push(fixture);
@@ -44,90 +43,105 @@ export default async function WSLFixturesPage() {
   const groupedUpcoming = groupByDate(upcoming);
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <NavBar />
-      <div className="p-8">
-        <h1 className="text-2xl font-bold mb-6 text-red-800">WSL Fixtures & Results</h1>
+    <main className="bg-gray-900 text-pink-400 min-h-screen p-6 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-between gap-4 mb-6">
+        <Link
+          href="/"
+          className="bg-pink-500 hover:bg-pink-400 text-gray-900 px-4 py-2 rounded-lg font-semibold transition"
+        >
+          ← Home
+        </Link>
+        <h1 className="text-lg sm:text-xl font-semibold m-auto">WSL Fixtures & Results</h1>
+        <Link
+          href="/leagues/wsl"
+          className="bg-pink-500 hover:bg-pink-400 text-gray-900 px-4 py-2 rounded-lg font-semibold transition"
+        >
+          Back to WSL
+        </Link>
+      </div>
 
-        {/* Upcoming Fixtures */}
-        <h2 className="text-xl font-bold mt-10 mb-4 text-gray-800">📅 Upcoming Fixtures</h2>
+      {/* Upcoming Fixtures */}
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-4 text-pink-300">📅 Upcoming Fixtures</h2>
         {Object.keys(groupedUpcoming).length === 0 ? (
-          <p>No upcoming fixtures.</p>
+          <p className="text-gray-400">No upcoming fixtures.</p>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-6">
             {Object.entries(groupedUpcoming).map(([date, fixtures]) => (
               <div key={date}>
-                <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                <h3 className="text-lg font-semibold text-pink-200 mb-2">
                   {formatDateHeader(date)}
                 </h3>
-                <div className="space-y-2">
-                  {fixtures.map((fixture: any) => (
-                    <div
-                      key={fixture.fixture.id}
-                      className="grid grid-cols-6 gap-4 items-center py-2 border-b text-sm"
+                <ul className="space-y-2">
+                  {fixtures.map((f) => (
+                    <li
+                      key={f.fixture.id}
+                      className="grid grid-cols-6 gap-2 items-center text-sm bg-gray-800 p-2 rounded-lg"
                     >
-                      <div className="text-gray-500">{formatTime(fixture.fixture.date)}</div>
-                      <div className="text-right">{fixture.teams.home.name}</div>
+                      <div>{formatTime(f.fixture.date)}</div>
+                      <div className="text-right">{f.teams.home.name}</div>
                       <div className="text-center font-semibold">vs</div>
-                      <div className="text-left">{fixture.teams.away.name}</div>
+                      <div className="text-left">{f.teams.away.name}</div>
                       <div className="text-gray-400 italic">
-                        <a href={`/venues/${fixture.fixture.venue.id}`} className="underline">
-                          {fixture.fixture.venue.name || "Venue TBC"}
-                        </a>
+                        <Link href={`/venues/${f.fixture.venue.id}`} className="underline">
+                          {f.fixture.venue.name || "Venue TBC"}
+                        </Link>
                       </div>
                       <div className="text-center">
-                        <a
-                          href={`#`} // Placeholder for tickets
-                          className="text-blue-600 underline hover:text-blue-800"
+                        <Link
+                          href="#"
+                          className="text-pink-300 underline hover:text-pink-100"
                         >
                           Tickets
-                        </a>
+                        </Link>
                       </div>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
         )}
+      </section>
 
-        {/* Results */}
-        <h2 className="text-xl font-bold mt-14 mb-4 text-gray-800">🔙 Recent Results</h2>
+      {/* Recent Results */}
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-4 text-pink-300">🔙 Recent Results</h2>
         {Object.keys(groupedResults).length === 0 ? (
-          <p>No recent results.</p>
+          <p className="text-gray-400">No recent results.</p>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-6">
             {Object.entries(groupedResults).map(([date, fixtures]) => (
               <div key={date}>
-                <h3 className="text-lg font-semibold text-gray-700 mb-4">
+                <h3 className="text-lg font-semibold text-pink-200 mb-2">
                   {formatDateHeader(date)}
                 </h3>
-                <div className="space-y-2">
-                  {fixtures.map((fixture: any) => (
-                    <div
-                      key={fixture.fixture.id}
-                      className="grid grid-cols-6 gap-4 items-center py-2 border-b text-sm"
+                <ul className="space-y-2">
+                  {fixtures.map((f) => (
+                    <li
+                      key={f.fixture.id}
+                      className="grid grid-cols-6 gap-2 items-center text-sm bg-gray-800 p-2 rounded-lg"
                     >
-                      <div className="text-gray-500">{formatTime(fixture.fixture.date)}</div>
-                      <div className="text-right">{fixture.teams.home.name}</div>
+                      <div>{formatTime(f.fixture.date)}</div>
+                      <div className="text-right">{f.teams.home.name}</div>
                       <div className="text-center font-semibold">
-                        {fixture.goals.home} - {fixture.goals.away}
+                        {f.goals.home} - {f.goals.away}
                       </div>
-                      <div className="text-left">{fixture.teams.away.name}</div>
+                      <div className="text-left">{f.teams.away.name}</div>
                       <div className="text-gray-400 italic">
-                        <a href={`/venues/${fixture.fixture.venue.id}`} className="underline">
-                          {fixture.fixture.venue.name || "Venue TBC"}
-                        </a>
+                        <Link href={`/venues/${f.fixture.venue.id}`} className="underline">
+                          {f.fixture.venue.name || "Venue TBC"}
+                        </Link>
                       </div>
                       <div className="text-center text-gray-500 italic">FT</div>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
         )}
-      </div>
+      </section>
     </main>
   );
 }
