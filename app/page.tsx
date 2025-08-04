@@ -6,7 +6,7 @@ const NavBar = () => (
     <div className="max-w-6xl mx-auto flex justify-between items-center">
       <Link href="/" className="flex items-center space-x-2">
         <img src="/logos/PP_Logo_64px.png" alt="PP Logo" className="h-10 w-auto" />
-        <span className="text-xl font-bold hidden sm:inline">League Portal</span>
+        <span className="text-xl font-bold hidden sm:inline">The Pyramid Page</span>
       </Link>
       <div className="space-x-4 text-sm sm:text-base">
         <Link href="/" className="hover:text-pink-400 transition">Home</Link>
