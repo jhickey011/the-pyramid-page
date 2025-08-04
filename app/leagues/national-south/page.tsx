@@ -90,7 +90,7 @@ export default function NationalSouthPage() {
         </Link>
         <h1 className="text-lg sm:text-xl font-semibold m-auto">Southern Premier Division</h1>
         <Link
-          href="/leagues/southern-premier/fixtures"
+          href="/leagues/national-south/fixtures"
           className="bg-pink-500 hover:bg-pink-400 text-gray-900 px-4 py-2 rounded-lg font-semibold transition"
         >
           Fixtures & Results
