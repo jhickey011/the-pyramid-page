@@ -721,43 +721,33 @@
   },
   {
     "date": "12/04/26",
-    "time": "14:00",
     "home_team": "AFC Bournemouth",
     "away_team": "Real Bedford",
     "venue": "RINGWOOD TOWN FOOTBALL CLUB",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "12/04/26",
-    "time": "14:00",
     "home_team": "AFC Wimbledon",
     "away_team": "Exeter City",
     "venue": "AFC WIMBLEDON",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "12/04/26",
-    "time": "14:00",
     "home_team": "Gwalla United",
     "away_team": "Watford",
     "venue": "UNIVERSITY OF SOUTH WALES SPORTS PARK",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "12/04/26",
-    "time": "14:00",
     "home_team": "Cheltenham Town",
     "away_team": "Hashtag United",
     "venue": "BISHOPS CLEEVE FC",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "12/04/26",
-    "time": "14:00",
     "home_team": "Lewes",
     "away_team": "Billericay Town",
     "venue": "LEWES FC (THE DRIPPING PAN)",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "12/04/26",
@@ -765,27 +755,21 @@
     "home_team": "Plymouth Argyle",
     "away_team": "Oxford United",
     "venue": "PLYMOUTH ARGYLE FC (HOME PARK)",
-    "competition": "Southern Premier Division"
-  },
+ },
   {
     "date": "26/04/26",
-    "time": "14:00",
     "home_team": "Billericay Town",
     "away_team": "Cheltenham Town",
     "venue": "BILLERICAY TOWN FC (NEW LODGE)",
-    "competition": "Southern Premier Division"
-  },
+ },
   {
     "date": "26/04/26",
-    "time": "14:00",
     "home_team": "Exeter City",
     "away_team": "Gwalla United",
     "venue": "EXETER CITY FOOTBALL CLUB",
-    "competition": "Southern Premier Division"
-  },
+ },
   {
     "date": "26/04/26",
-    "time": "14:00",
     "home_team": "Hashtag United",
     "away_team": "AFC Wimbledon",
     "venue": "PARKSIDE (AVELEY FOOTBALL CLUB)",
@@ -793,27 +777,21 @@
   },
   {
     "date": "26/04/26",
-    "time": "14:00",
     "home_team": "Oxford United",
     "away_team": "Lewes",
     "venue": "OXFORD CITY FC (COURT PLACE FARM)",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "26/04/26",
-    "time": "14:00",
     "home_team": "Real Bedford",
     "away_team": "Plymouth Argyle",
     "venue": "LEDGER STADIUM (REAL BEDFORD FC)",
-    "competition": "Southern Premier Division"
   },
   {
     "date": "26/04/26",
-    "time": "14:00",
     "home_team": "Watford",
     "away_team": "AFC Bournemouth",
     "venue": "GROSVENOR VALE",
-    "competition": "Southern Premier Division"
   }
 ]
 
