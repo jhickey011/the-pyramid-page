@@ -25,6 +25,7 @@ export default function FixturesPage() {
           return true
         })
 
+        // Sort fixtures by actual date
         deduped.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
         const grouped: Record<string, Fixture[]> = {}
